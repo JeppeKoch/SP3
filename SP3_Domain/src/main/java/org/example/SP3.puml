@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/object-diagram
+!pragma layout smetana
+object Main
+object Menu
+object User
+object Media
+object Movie
+object Series
+object Crime
+object War
+object Drama
+object Family
+object Romance
+object SciFi
+object Season
+object Episode
+object ReleaseYear
+object Rating
+object Genre
+
+User *-- Menu
+Menu *-- Media
+Media <|-- ReleaseYear
+ReleaseYear *-- Movie
+ReleaseYear *-- Series
+Season *-- Episode
+Series *-- Season
+Movie *-- Genre
+Series *-- Genre
+
+Genre <|-- Crime
+Genre <|-- Crime
+Genre <|-- War
+Genre <|-- War
+Genre <|-- Drama
+Genre <|-- Drama
+Genre <|-- Family
+Genre <|-- Family
+Genre <|-- Romance
+Genre <|-- Romance
+Genre <|-- SciFi
+Genre <|-- SciFi
+Series *-- Rating
+Movie *-- Rating
+
+
+
+@enduml
