@@ -6,7 +6,8 @@ public class User {
 private String name;
 private String username;
 private  String password;
-//  recentlyViewed
+
+//  recentlyViewed laves senere
     ArrayList <Media> watchList = new ArrayList<>();
     ArrayList <Media> saveMedia = new ArrayList<>();
     ArrayList <Media> allMedia = new ArrayList<>();
@@ -21,10 +22,9 @@ private  String password;
 
     }
 
-    public User(String name, String username, String password) {
+    public User(String name, ) {
         this.name = name;
-        this.username = username;
-        this.password = password;
+
     }
 
     public String getName(){
@@ -32,12 +32,4 @@ private  String password;
 
     }
 
-    public String getUsername(){
-        return username;
-
-    }
-
-    public String getPassword() {
-        return password;
-    }
 }
