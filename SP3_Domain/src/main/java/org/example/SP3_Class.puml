@@ -10,35 +10,30 @@ class Main{
 + static void main()
 }
 
-class Login{
-login()
-logout()
+class StreamingService{
++login()
++displayStartMenu()
++displayMainMenu()
 }
 
 class User{
 - String name
--username
--password
 -recentlyViewed
 -arrayList<Media>watchList
 -arrayList<Media>saveMedia
 -arrayList<Media>allMedia
 +addMedia()
 +removeMedia()
-+user(username, password, recentlyViewed, favorite, addMedia, removeMedia)
++user(recentlyViewed, favorite, addMedia, removeMedia)
 +getName()
 +getUsername()
 +getPassword()
 }
 
-class Menu{
-+displayStartMenu()
-+displayMainMenu()
-}
 
 class Media{
 -title
--genre
+-ArrayList<String>genres
 -releasDate
 -rating
 media(title,ArrayList<String>genre,rating, releasDate)
@@ -68,9 +63,7 @@ class Movie{
 toString()
 }
 
-interface Genre{
-toString()
-}
+
 
 interface Data{
 
@@ -83,45 +76,22 @@ new File (fileName)
 new Scanner (file)
 }
 
-class Crime{
-toString()
-}
-class War{
-toString()
-}
-class Drama{
-toString()
-}
-class Family{
-toString()
-}
-class Romance{
-toString()
-}
-class SciFi{
-toString()
-}
 
 
-Main *-- Login
-Login *-- User
-User o-- Menu
-Menu *-- Media
+
+Main *-- StreamingService
+StreamingService *-- User
+User *-- Media
 Media <|-- Movie
 Media <|-- Series
-Media *-- Genre
+
 Data <|.- FileIO
 Media *-- Data
 
 
 Series *-- Season
 
-Genre <|.- War
-Genre <|.- Crime
-Genre <|.- Romance
-Genre <|.- Family
-Genre <|.- SciFi
-Genre <|.- Drama
+
 
 
 
